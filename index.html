@@ -82,15 +82,19 @@
   }
 
   /* --- BUTTON (CTA) --- */
-  .cta {
-    display: inline-block;
-    background: linear-gradient(90deg, var(--accent), #f0f0f0);
-    color: #000;
-    padding: 0.7rem 1rem;
-    border-radius: 10px;
-    font-weight: 600;
-    text-decoration: none;
-  }
+  cta {
+  background: var(--accent); /* solid gold color */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: none; /* no fade effect */
+}
+
+.cta:hover {
+  background: var(--accent); /* stays the same when hovered */
+  opacity: 1; /* no dimming */
+}
 
   /* --- PORTFOLIO GRID --- */
   .portfolio-grid {
@@ -144,7 +148,7 @@
   <main class="container">
     <section id="home" class="hero">
       <div>
-        <h1 style="font-size:2rem;margin:0 0 0.5rem">Hi - I'm <span style="color:var(--f0f0f0)">Mike</span>!</h1>
+        <h1 style="font-size:2rem;margin:0 0 0.5rem">Hi - I'm <span style="color:#f0f0f0">Mike</span></h1>
         <p>Project & Process Support Specialist with expertise in ERP integration, process automation, and reporting for construction and telecom industries.</p>
         <a class="cta" href="#contact">Work with me</a>
       </div>
