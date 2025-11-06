@@ -82,13 +82,16 @@
   }
 
   /* --- BUTTON (CTA) --- */
-  cta {
-  background: var(--accent); /* solid gold color */
+  .cta {
+  background: linear-gradient(to right, var(--accent), var(--card));
+  transition: 0.3s;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   text-decoration: none;
-  transition: none; /* no fade effect */
+}
+.cta:hover {
+  opacity: 0.8;
 }
 
 .cta:hover {
