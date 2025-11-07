@@ -243,10 +243,20 @@
       <p>© <span id="year"></span> Michael John F. Cruz</p>
     </footer>
   </main>
-<div class="quote">
-  <p>"The best way to predict the future is to create it."</p>
-  <span>– Peter Drucker</span>
-</div>
+<div class="quote" id="quote-box"></div>
+
+<script>
+const quotes = [
+  '"The best way to predict the future is to create it." – Peter Drucker',
+  '"Every project is a chance to outdo yourself."',
+  '"Dream big. Work smart. Stay humble."',
+  '"Make it simple, but significant." – Don Draper',
+  '"Design is intelligence made visible." – Alina Wheeler'
+];
+document.getElementById("quote-box").innerHTML =
+  quotes[Math.floor(Math.random() * quotes.length)];
+</script>
+
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
