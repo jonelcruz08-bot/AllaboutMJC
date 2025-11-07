@@ -125,6 +125,22 @@
     background: #fff;
     color: var(--text);
   }
+ .quote {
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  width: 280px;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.4); /* soft visibility */
+  font-size: 14px;
+  text-align: right;
+  transition: all 0.3s ease;
+}
+
+.quote:hover {
+  color: rgba(0, 0, 0, 0.8); /* highlight when hovered */
+  transform: translateY(-3px);
+}
 </style>
 
 </head>
@@ -227,6 +243,10 @@
       <p>© <span id="year"></span> Michael John F. Cruz</p>
     </footer>
   </main>
+<div class="quote">
+  <p>"The best way to predict the future is to create it."</p>
+  <span>– Peter Drucker</span>
+</div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
