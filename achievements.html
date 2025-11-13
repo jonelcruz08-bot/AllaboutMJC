@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Journey & Achievements</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #D3D3D3;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .timeline {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Timeline line */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+
+  .entry {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .entry.left {
+    left: 0;
+    text-align: right;
+  }
+
+  .entry.right {
+    left: 50%;
+  }
+
+  .entry img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #000;
+    background-color: #f0f0f0;
+  }
+
+  .entry h2 {
+    margin-top: 0;
+    font-size: 1.4em;
+  }
+
+  .entry p, .entry ul {
+    margin: 10px 0;
+    text-align: left;
+  }
+
+  .entry.left p, .entry.left ul {
+    text-align: right;
+  }
+
+  /* Connector circles */
+  .entry::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 30px;
+    z-index: 1;
+  }
+
+  .entry.left::after {
+    right: -10px;
+  }
+
+  .entry.right::after {
+    left: -10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .entry {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: left !important;
+      left: 0 !important;
+    }
+    .timeline::before {
+      left: 20px;
+    }
+    .entry::after {
+      left: 10px !important;
+    }
+  }
+#achievements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 auto;
+  position: relative;        /* needed for absolute pop-out */
+}
+
+#achievements .img-wrapper {
+  position: relative;        /* wrapper relative for absolute child */
+  overflow: visible;         /* allow hover expansion */
+}
+
+#achievements img {
+  max-width: 150px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  transition: transform 0.3s, z-index 0.3s;
+  display: block;
+}
+
+#achievements img:hover {
+  transform: scale(6);       /* pop-out size */
+  position: relative;
+  z-index: 100;              /* stay above everything */
+}
+
+
+
+    .card {
+      background: #D4AF37;
+      padding: 1.5rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    a.cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #D3D3D3, #f0f0f0);
+      color: #000;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+	  }
+  .gallery img, .gallery video {
+    max-width: 300px;
+    margin: 1rem;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+
+<a href="index.html" class="cta">← Back to Home</a>
+
+<div class="container">
+  <h1>My Journey, Achievements and Commendations</h1>
+  <center><h4>My professional journey has been shaped by curiosity, hard work, and a constant drive to improve — both as a professional and as a person.</h4></center>
+  <div class="timeline">
+
+    <div class="entry left">
+      <img src="thayerpc.jpg" alt="ThayerPC">
+	   
+      <h2>ThayerPC (August 2024 – Present)</h2>
+      <p>I began my journey with ThayerPC as a Project Coordinator, responsible for creating commitments for Power Projects, supporting General Foremen and Foremen in their daily operations.</p>
+      <p>As I gained experience, I started building custom templates to streamline project creation, commitments, billing, and daily crew reports. I worked primarily with Procore and NetSuite, ensuring that all data and workflows were accurate and efficient.</p>
+      <p>Over time, I took on additional responsibilities — including Accounts Payable, productivity investigations, and process optimization. Eventually, I developed Python and Excel automations to simplify repetitive tasks, reduce human error, and improve reporting accuracy.</p>
+	  <p>My dedication and consistent performance have been recognized by my superiors, including personal commendations from my boss praising my commitment to excellence.</p>
+    </div>
+	
+<div class="entry right">
+  <p>Some of my client commendations in Thayer</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <section id="achievements">
+	<img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\amy.png" alt="Commendation" style="max-width:150px;">
+    <img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\ty.png" alt="Commendation" style="max-width:150px;">
+    <img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\tys.png" alt="Commendation" style="max-width:150px;"></br>
+	  </section>
+  </div>
+</div>
+
+    <div class="entry right">
+      <img src="turn5.jpg" alt="Turn5">
+      <h2>Turn5 (2020 – 2024)</h2>
+      <p>Before joining ThayerPC, I worked as a Product Images Procurement Specialist at Turn5, managing image sourcing and editing for major American automotive brands and aftermarket parts.</p>
+      <ul>
+        <li>I handled image procurement, Adobe Photoshop automation, and HTML-based product description copywriting. All product data and visuals were uploaded to our backend via VMware, ensuring each listing was accurate and visually optimized.</li>
+        <li>I also:</li>
+        <li>Created installation guides for each car part when available.</li>
+		<li>Searched for and compiled YouTube installation videos to complement the guides.</li>
+		<li>Managed product fitments, descriptions, and review keys, building database systems that linked similar product types for easier updates and quality consistency.:</li>
+      </ul>
+      <p>During my five years at Turn5, I maintained perfect attendance and consistently received recognition for dedication, quality work, and process improvement.</p>
+    </div>
+<div class="entry left">
+  <p>Some of my client commendations in Turn5</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <section id="achievements">
+	<img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\COMMENDSAM.jpg" alt="Commendation" style="max-width:100px;">
+    <img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\PROOFHARDWORK.jpg" alt="Commendation" style="max-width:100px;"></br>
+	  </section>
+  </div>
+   </div>
+    <div class="entry left">
+      <img src="ATT.png" alt="AT&T Mobility">
+      <h2>AT&T Mobility (2018 – 2020)</h2>
+      <p>My professional growth began at AT&T Mobility, where I started as a Technical Support Agent. Through consistent performance, I became one of the Top Agents for several consecutive months and earned a place in the AT&T Diamond List — recognizing top-performing agents across the organization.</p>
+      <p>Later, I was entrusted to train and mentor over 100 new hires, guiding them through troubleshooting, billing, sales, device unlocks, and international plan support.</p>
+      <p>When the pandemic struck, I made the difficult decision to step away to prioritize my family’s safety. That period became a turning point, inspiring me to continue improving and growing stronger when I returned to my professional path.</p>
+    </div>
+<div class="entry right">
+  <p>Some of my client commendations and Certificate in AT&T</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <section id="achievements">
+	
+	<img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\CERT SUPPORT.png" alt="Commendation" style="max-width:150px;"></br>
+	<br><p>When I handle and trained new hires</p>
+	<br><center><p>Getting top 1</p></center>
+    <img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\CERTTOP1AGENTAPRIL1.jpg" alt="Commendation" style="max-width:150px;"></br>
+	<img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\CERTTOP1AGENTAPRIL1.jpg" alt="Commendation" style="max-width:150px;"></br>
+	<img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\ske.jpg" alt="Commendation" style="max-width:150px;"></br>
+	<img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\jan.jpeg" alt="Commendation" style="max-width:150px;"></br>
+	<br><p>When I got the Diamond lister Certificate.</br></p>
+	<img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\dia.jpeg" alt="Commendation" style="max-width:150px;"></br>
+    <br><p>Visited by our client. I am holding my certificate as a top 1 agent of AT&T Mobility</br></p>
+	<img src="C:\Users\Michael John Cruz\Documents\website building portfolio\New folder\HOLDINGCERT.jpg" alt="Commendation" style="max-width:150px;"></br>
+	  </section>
+  </div>
+    </div>
+    <div class="entry left">
+      <img src="family business.jpg" alt="Family Business">
+      <h2>Family Business – Suman Delicacies of Antipolo</h2>
+      <p>Beyond corporate life, I’ve always stayed grounded in my roots. Our family business in Antipolo, known for its famous “Suman” delicacies, taught me early lessons about leadership, discipline, and responsibility.</p>
+      <p>I managed production, inventory, distribution, and deliveries, gaining hands-on experience in operations and logistics. These lessons shaped my understanding of teamwork, customer satisfaction, and business sustainability.</p>
+	  <p>Though my family continues to manage the business today, I carry those lessons with me — using them as the foundation for my professional values: hard work, accountability, and continuous growth.</p>
+    </div>
+	
+	
+
+  </div>
+</div>
+
+</body>
+</html>
