@@ -70,30 +70,6 @@
     align-items: center;
     padding: 3rem 0;
   }
-  /* --- HERO SECTION --- */
-  .hero {
-  display: grid;
-  grid-template-columns: auto 1fr 380px; /* Image | Text | Card */
-  align-items: center;
-  gap: 2rem;
-  position: relative; /* needed for floating image */
-}
-
-/* Floating image outside the card */
-.hero-image {
-  position: relative;
-  margin-left: -60px; /* move image outside of container */
-  z-index: 2; /* stay on top of background */
-}
-
-.hero-image img {
-  width: 250px;            /* set image size */
-  border-radius: 12px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
-  object-fit: cover;
-}
-
-
   /* --- CARD --- */
   .card {
     background: var(--card);
