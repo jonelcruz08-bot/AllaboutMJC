@@ -177,7 +177,7 @@
             <a href="experience.html">Experience</a>
             <a href="Skills.html">Skills</a>
             <a href="#portfolio">Portfolio</a>
-            <a href="#portfolio">Projects</a>
+           <a href="#projects" id="projects-link">Projects</a> <!-- add an ID -->
             <a href="Education.html">Education</a>
             <a href="achievements.html">Achievements</a>
             <a href="#contact">Contact</a>
@@ -186,7 +186,18 @@
       </b>
     </nav>
   </header>
+<!-- Your other page content -->
 
+  <script>
+    // Select the Projects link by its ID
+    const projectsLink = document.getElementById('projects-link');
+
+    // Add click event to show alert
+    projectsLink.addEventListener('click', function(event) {
+      event.preventDefault(); // stop scrolling or navigation
+      alert("🚧 Projects page is under construction! 🚧");
+    });
+  </script>
   <main class="container">
    <section id="home" class="hero">
   <div>
