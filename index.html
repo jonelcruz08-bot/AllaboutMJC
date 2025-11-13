@@ -138,58 +138,90 @@
   color: rgba(0, 0, 0, 0.8); /* highlight when hovered */
   transform: translateY(-3px);
 }
+/* HERO SECTION GRID */
 .hero {
   display: grid;
   grid-template-columns: auto 1fr 380px; /* Image | Text | Card */
-  align-items: center;
   gap: 2rem;
-  position: relative; /* needed for floating image */
+  align-items: center;
+  position: relative;
+  padding: 3rem 0;
 }
 
-/* Floating image outside the card */
+/* FLOATING IMAGE OUTSIDE CARD AND OVERLAP */
 .hero-image {
   position: relative;
-  margin-left: -60px; /* move image outside of container */
-  z-index: 2; /* stay on top of background */
+  margin-left: -50px;      /* pull outside container */
+  z-index: 3;              /* above card */
 }
 
 .hero-image img {
-  width: 250px;            /* set image size */
+  width: 250px;             /* desktop size */
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
   object-fit: cover;
+  display: block;
+  position: relative;
+  top: 0;                   /* adjust vertical positioning if needed */
 }
+
+/* HERO TEXT */
+.hero-text h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  margin-bottom: 1rem;
+}
+
+/* PREVENT HORIZONTAL SCROLL */
 body {
-  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* Make hero image responsive */
-.hero-image img {
-  max-width: 100%;      /* never exceed container width */
-  height: auto;         /* maintain aspect ratio */
-}
-
-/* Adjust negative margin for smaller screens */
+/* RESPONSIVE ADJUSTMENTS */
 @media screen and (max-width: 1024px) {
   .hero {
-    grid-template-columns: 200px 1fr 380px; /* shrink image */
+    grid-template-columns: 200px 1fr 320px; 
     gap: 1rem;
   }
   .hero-image {
-    margin-left: -20px; /* less negative on smaller screens */
+    margin-left: -20px;
+  }
+  .hero-image img {
+    width: 180px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero {
-    grid-template-columns: 1fr; /* stack items vertically */
-    gap: 1rem;
+    grid-template-columns: 1fr; /* stack vertically */
+    gap: 1.5rem;
   }
   .hero-image {
-    margin-left: 0; /* no negative margin on mobile */
+    margin-left: 0;
+    text-align: center;
     margin-bottom: 1rem;
+  }
+  .hero-image img {
+    width: 150px;
+    margin: 0 auto;
+  }
+  .hero-text, .card {
     text-align: center;
   }
+}
+
+/* OVERLAP EFFECT */
+.hero-image img {
+  transform: translateX(30px);  /* moves image slightly over contact card */
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: translateX(35px);  /* subtle hover effect */
 }
 
 </style>
@@ -214,24 +246,21 @@ body {
 	  </b>
     </nav>
   </header>
-
  <section id="home" class="hero">
   <!-- Floating Left Image -->
   <div class="hero-image">
     <img src="images/PICSITTING.jpg" alt="Michael John F. Cruz" />
   </div>
-
   <!-- Right side: Intro Text -->
   <div class="hero-text">
     <h1 style="font-size:2rem;margin:0 0 0.5rem">
-      Hi - I'm <span style="color:#000000">Mike</span>
+      Hi - I'm <span style="color:#000000">Mike!</span>
     </h1>
     <p>
       Results-driven professional with experience in project coordination, process automation, and data management. Skilled in streamlining workflows, building automated reporting systems, and managing ERP integrations with Procore and NetSuite. Strong background in Excel, Python, and project documentation, with a focus on improving efficiency, accuracy, and communication across teams.
     </p>
     <a class="cta" href="#contact">Work with me</a>
   </div>
-
   <!-- Contact Card -->
   <aside class="card">
     <h3>Contact Info</h3>
