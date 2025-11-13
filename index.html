@@ -159,6 +159,38 @@
   box-shadow: 0 12px 28px rgba(0,0,0,0.3);
   object-fit: cover;
 }
+body {
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* Make hero image responsive */
+.hero-image img {
+  max-width: 100%;      /* never exceed container width */
+  height: auto;         /* maintain aspect ratio */
+}
+
+/* Adjust negative margin for smaller screens */
+@media screen and (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 200px 1fr 380px; /* shrink image */
+    gap: 1rem;
+  }
+  .hero-image {
+    margin-left: -20px; /* less negative on smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr; /* stack items vertically */
+    gap: 1rem;
+  }
+  .hero-image {
+    margin-left: 0; /* no negative margin on mobile */
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
 
 </style>
 
