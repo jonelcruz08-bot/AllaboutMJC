@@ -66,12 +66,27 @@
 
   /* --- HERO SECTION --- */
   .hero {
-    display: grid;
-    grid-template-columns: 1fr 380px; /* text + image side by side */
-    gap: 2rem;
-    align-items: center;
-    padding: 3rem 0;
-  }
+  display: grid;
+  grid-template-columns: auto 1fr 380px; /* Image | Text | Card */
+  align-items: center;
+  gap: 2rem;
+  position: relative; /* needed for floating image */
+}
+
+/* Floating image outside the card */
+.hero-image {
+  position: relative;
+  margin-left: -60px; /* move image outside of container */
+  z-index: 2; /* stay on top of background */
+}
+
+.hero-image img {
+  width: 250px;            /* set image size */
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
 
   /* --- CARD --- */
   .card {
@@ -164,20 +179,33 @@
     </nav>
   </header>
 
-  <main class="container">
-    <section id="home" class="hero">
-      <div>
-        <h1 style="font-size:2rem;margin:0 0 0.5rem">Hi - I'm <span style="color:#000000">Mike</span></h1>
-        <p>Results-driven professional with experience in project coordination, process automation, and data management. Skilled in streamlining workflows, building automated reporting systems, and managing ERP integrations with Procore and NetSuite. Strong background in Excel, Python, and project documentation, with a focus on improving efficiency, accuracy, and communication across teams</p>
-        <a class="cta" href="#contact">Work with me</a>
-      </div>
-      <aside class="card">
-        <h3>Contact Info</h3>
-        <p>Email: <a href="mailto:jonelcruz08@gmail.com" style="color:var(--f0f0f0)">jonelcruz08@gmail.com</a><br>
-        Phone: +63 921 996 1335<br>
-        Location: Antipolo City, Philippines</p>
-      </aside>
-    </section>
+ <section id="home" class="hero">
+  <!-- Floating Left Image -->
+  <div class="hero-image">
+    <img src="your-image.jpg" alt="Michael John F. Cruz" />
+  </div>
+
+  <!-- Right side: Intro Text -->
+  <div class="hero-text">
+    <h1 style="font-size:2rem;margin:0 0 0.5rem">
+      Hi - I'm <span style="color:#000000">Mike</span>
+    </h1>
+    <p>
+      Results-driven professional with experience in project coordination, process automation, and data management. Skilled in streamlining workflows, building automated reporting systems, and managing ERP integrations with Procore and NetSuite. Strong background in Excel, Python, and project documentation, with a focus on improving efficiency, accuracy, and communication across teams.
+    </p>
+    <a class="cta" href="#contact">Work with me</a>
+  </div>
+
+  <!-- Contact Card -->
+  <aside class="card">
+    <h3>Contact Info</h3>
+    <p>Email: <a href="mailto:jonelcruz08@gmail.com" style="color:var(--f0f0f0)">jonelcruz08@gmail.com</a><br>
+       Phone: +63 921 996 1335<br>
+       Location: Antipolo City, Philippines
+    </p>
+  </aside>
+</section>
+
 
     <section id="about" style="margin-top:1.6rem">
       <div class="card">
