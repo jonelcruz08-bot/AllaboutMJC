@@ -63,14 +63,23 @@
   .menu a:hover {
     background: rgba(0, 0, 0, 0.05); /* light hover effect */
   }
+/* Container to center everything */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Grid Layout */
 .hero {
   display: grid;
-  grid-template-columns: 200px 1fr 380px; /* image + text + contact card */
+  grid-template-columns: minmax(150px, 1fr) 2fr minmax(250px, 1fr);
   gap: 2rem;
   align-items: center;
   padding: 3rem 0;
 }
 
+/* Left: Image Styling */
 .hero-image {
   display: flex;
   justify-content: center;
@@ -79,10 +88,63 @@
 
 .profile-img {
   width: 100%;
-  max-width: 180px; /* adjust size as needed */
-  border-radius: 10px; /* optional for rounded corners */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* optional for depth */
+  max-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  object-fit: cover;
 }
+
+/* Middle: Text Styling */
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text .highlight {
+  color: var(--f0f0f0);
+}
+
+.hero-text p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #D4AF37;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Right: Contact Card */
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  color: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image,
+  .card {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-img {
+    max-width: 250px;
+  }
+}
+
 
   /* --- CARD --- */
   .card {
@@ -178,31 +240,32 @@
   </header>
 <main class="container">
   <section id="home" class="hero">
-    <!-- Image Column -->
+    <!-- Left: Profile Image -->
     <div class="hero-image">
       <img src="images/mike-suit.jpg" alt="Mike in suit" class="profile-img">
     </div>
 
-    <!-- Text Column -->
-    <div>
-      <h1 style="font-size:2rem;margin:0 0 0.5rem">
-        Hi - I'm <span style="color:var(--f0f0f0)">Mike!</span>!
-      </h1>
+    <!-- Middle: Text -->
+    <div class="hero-text">
+      <h1>Hi - I'm <span class="highlight">Mike</span>!</h1>
       <p>
         Results-driven professional with experience in project coordination, process automation, and data management. Skilled in streamlining workflows, building automated reporting systems, and managing ERP integrations with Procore and NetSuite. Strong background in Excel, Python, and project documentation, with a focus on improving efficiency, accuracy, and communication across teams.
       </p>
       <a class="cta" href="#contact">Work with me</a>
     </div>
 
-    <!-- Contact Card Column -->
+    <!-- Right: Contact Card -->
     <aside class="card">
       <h3>Contact Info</h3>
-      <p>Email: <a href="mailto:jonelcruz08@gmail.com" style="color:var(--f0f0f0)">jonelcruz08@gmail.com</a><br>
-      Phone: +63 921 996 1335<br>
-      Location: Antipolo City, Philippines</p>
+      <p>
+        Email: <a href="mailto:jonelcruz08@gmail.com">jonelcruz08@gmail.com</a><br>
+        Phone: +63 921 996 1335<br>
+        Location: Antipolo City, Philippines
+      </p>
     </aside>
   </section>
 </main>
+
 
 
     <section id="about" style="margin-top:1.6rem">
